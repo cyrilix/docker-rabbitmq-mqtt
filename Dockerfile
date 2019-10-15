@@ -1,6 +1,6 @@
 FROM rabbitmq:3.7
 
-ENV PROMETHEUS_RABBITMQ_EXPORTER_VERSION="v3.7.9.1" RABBITMQ_VERSION=3.7.14
+ENV PROMETHEUS_RABBITMQ_EXPORTER_VERSION="v3.7.9.1" RABBITMQ_VERSION=3.7.18
 
 # prometheus exporter plugin
 RUN apt-get update && apt-get install --yes wget && \
