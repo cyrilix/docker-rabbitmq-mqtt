@@ -16,6 +16,7 @@ RUN apt-get update && apt-get install --yes wget && \
 
 RUN rabbitmq-plugins enable --offline rabbitmq_management
 RUN rabbitmq-plugins enable --offline rabbitmq_mqtt
+RUN rabbitmq-plugins enable --offline rabbitmq_web_mqtt
 RUN rabbitmq-plugins enable --offline prometheus accept prometheus_rabbitmq_exporter prometheus_process_collector prometheus_httpd prometheus_cowboy
 
 # Fix nodename
@@ -23,6 +24,7 @@ RUN echo 'NODENAME=rabbit@localhost' > /etc/rabbitmq/rabbitmq-env.conf
 
 
 EXPOSE 15672
+EXPOSE 15675
 EXPOSE 1883
 EXPOSE 8883
 
