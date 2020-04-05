@@ -1,6 +1,6 @@
-FROM rabbitmq:3.8
+FROM rabbitmq:3.8.3-alpine
 
-ENV RABBITMQ_VERSION=3.8.0
+ENV RABBITMQ_VERSION=3.8.3
 
 RUN rabbitmq-plugins enable --offline rabbitmq_management
 RUN rabbitmq-plugins enable --offline rabbitmq_mqtt
